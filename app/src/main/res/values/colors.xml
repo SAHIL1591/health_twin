@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Primary Brand -->
+    <color name="primaryBlue">#1E3A8A</color>
+    <color name="primaryBlueDark">#162E6E</color>
+    <color name="accentTeal">#0EA5A5</color>
+
+    <!-- Backgrounds -->
+    <color name="backgroundWhite">#FFFFFF</color>
+    <color name="surfaceLight">#F5F7FA</color>
+
+    <!-- Text -->
+    <color name="textPrimary">#1A1A1A</color>
+    <color name="textSecondary">#555555</color>
+    <color name="textHint">#888888</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+</resources>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_splash_gradient"
+    tools:context=".SplashActivity">
+
+    <!-- Center Container (Everything Centered Properly) -->
+    <LinearLayout
+        android:id="@+id/centerContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <!-- DNA Animation -->
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottieDNA"
+            android:layout_width="350dp"
+            android:layout_height="350dp"
+            app:lottie_rawRes="@raw/dna_animation"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_speed="0.6" />
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/tvAppName"
+            style="@style/TextHeadline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Digital Twin Health"
+            android:textColor="@android:color/white"
+            android:layout_marginTop="-40dp"/>
+
+        <!-- Tagline -->
+        <TextView
+            android:id="@+id/tvTagline"
+            style="@style/TextBody"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Your future, visualized"
+            android:textColor="#DDDDDD"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="100dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnStart"
+            style="@style/PrimaryButton"
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:text="Get Started"
+            android:textSize="18sp"
+            android:layout_marginTop="30dp"/>
+
+    </LinearLayout>
+
+
+    <!-- Footer -->
+    <TextView
+        android:id="@+id/tvPowered"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Powered by Zwickau University"
+        android:textSize="14sp"
+        android:textColor="#BBBBBB"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"/>
+
+</RelativeLayout>

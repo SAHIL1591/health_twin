@@ -1,0 +1,41 @@
+<resources>
+
+    <!-- Base App Theme -->
+    <style name="Theme.HealthTwin" parent="Theme.Material3.DayNight.NoActionBar">
+
+        <!-- Brand Colors -->
+        <item name="colorPrimary">@color/primaryBlue</item>
+        <item name="colorPrimaryVariant">@color/primaryBlueDark</item>
+        <item name="colorSecondary">@color/accentTeal</item>
+
+        <!-- Status Bar -->
+        <item name="android:statusBarColor">@color/primaryBlueDark</item>
+
+        <!-- Background -->
+        <item name="android:windowBackground">@color/backgroundWhite</item>
+
+    </style>
+
+    <!-- Headline Style -->
+    <style name="TextHeadline">
+        <item name="android:textColor">@color/textPrimary</item>
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <!-- Body Style -->
+    <style name="TextBody">
+        <item name="android:textColor">@color/textSecondary</item>
+        <item name="android:fontFamily">@font/roboto_regular</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+    <!-- Button Style -->
+    <style name="PrimaryButton" parent="Widget.Material3.Button">
+        <item name="android:backgroundTint">@color/primaryBlue</item>
+        <item name="android:textColor">@color/backgroundWhite</item>
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="cornerRadius">12dp</item>
+    </style>
+
+</resources>
