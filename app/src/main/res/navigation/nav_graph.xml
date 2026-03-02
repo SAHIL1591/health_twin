@@ -1,11 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
-<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:startDestination="@id/consentFragment">
 
     <fragment
         android:id="@+id/consentFragment"
         android:name="com.example.health_twin.ConsentFragment"
-        android:label="Consent"/>
+        android:label="Consent">
+
+        <action
+            android:id="@+id/action_consentFragment_to_profileSetupFragment"
+            app:destination="@id/profileSetupFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/profileSetupFragment"
+        android:name="com.example.health_twin.ProfileSetupFragment"
+        android:label="Profile Setup" />
 
 </navigation>

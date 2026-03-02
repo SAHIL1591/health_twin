@@ -1,14 +1,160 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ConsentFragment">
+    android:background="@drawable/bg_splash_gradient"
+    android:padding="24dp">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical">
 
-</FrameLayout>
+        <!-- Header Row -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_shield"
+                app:tint="#00D4FF" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Before we begin"
+                android:textSize="26sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:layout_marginStart="12dp"/>
+        </LinearLayout>
+
+        <!-- Space -->
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="32dp"/>
+
+        <!-- Disclaimer Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="24dp"
+            app:cardBackgroundColor="#121A2B"
+            app:strokeColor="#1F2A44"
+            app:strokeWidth="1dp"
+            android:padding="24dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Important Disclaimer"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginStart="10dp"
+                    android:padding="10dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:textColor="@android:color/white"/>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="16dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="This app provides educational estimates only. It is not a medical device and does not provide medical advice, diagnosis, or treatment."
+                    android:textColor="#9BB0C8"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:layout_marginStart="10dp"
+                    android:lineSpacingExtra="4dp"/>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="12dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Life expectancy calculations are based on simplified statistical models and should not be used for medical decision-making."
+                    android:textColor="#9BB0C8"
+                    android:textSize="15sp"
+                    android:padding="10dp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:layout_marginStart="10dp"
+                    android:lineSpacingExtra="4dp"/>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="12dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Always consult qualified healthcare professionals for health-related decisions. Your data stays on your device and is never shared."
+                    android:textColor="#9BB0C8"
+                    android:textSize="15sp"
+                    android:fontFamily="@font/roboto_regular"
+                    android:padding="10dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginBottom="20dp"
+                    android:lineSpacingExtra="4dp"/>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Space -->
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="28dp"/>
+
+        <!-- Checkbox -->
+        <CheckBox
+            android:id="@+id/cbAgree"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="I understand this is an educational tool and not medical advice. I agree to use this information responsibly."
+            android:textColor="#C8D6E5"
+            android:textSize="15sp"
+            android:paddingStart="8dp"
+            android:fontFamily="@font/roboto_regular"
+            android:buttonTint="#00D4FF"/>
+
+        <!-- Space -->
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="32dp"/>
+
+        <!-- Continue Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnContinue"
+            android:layout_width="300dp"
+            android:layout_height="64dp"
+            android:text="Continue"
+            android:textSize="18sp"
+            android:layout_gravity="center"
+            style="@style/PrimaryButton"
+            android:textColor="@color/white"
+            android:backgroundTint="#1A2443"
+            android:fontFamily="@font/roboto_bold"
+            app:cornerRadius="40dp"
+            android:enabled="false"/>
+
+    </LinearLayout>
+
+</ScrollView>
