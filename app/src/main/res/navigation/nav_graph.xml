@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
 <navigation
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:startDestination="@id/consentFragment">
 
+    <!-- Consent -->
     <fragment
         android:id="@+id/consentFragment"
         android:name="com.example.health_twin.ConsentFragment"
@@ -12,12 +12,34 @@
         <action
             android:id="@+id/action_consentFragment_to_profileSetupFragment"
             app:destination="@id/profileSetupFragment" />
-
     </fragment>
 
+    <!-- Profile Setup -->
     <fragment
         android:id="@+id/profileSetupFragment"
         android:name="com.example.health_twin.ProfileSetupFragment"
-        android:label="Profile Setup" />
+        android:label="Profile Setup">
+
+        <action
+            android:id="@+id/action_profileSetupFragment_to_lifestyleSetupFragment"
+            app:destination="@id/lifestyleSetupFragment" />
+    </fragment>
+
+    <!-- Lifestyle Setup -->
+    <fragment
+        android:id="@+id/lifestyleSetupFragment"
+        android:name="com.example.health_twin.LifeStyleSetupFragment"
+        android:label="Lifestyle Setup">
+
+        <action
+            android:id="@+id/action_lifestyleSetupFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+    </fragment>
+
+    <!-- Result -->
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.example.health_twin.ResultFragment"
+        android:label="Result" />
 
 </navigation>
